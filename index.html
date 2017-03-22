@@ -154,7 +154,7 @@
                         <img src="img/portfolio/armo.png" class="img-responsive" alt="">
                     </a>
                 </div>
-                <!--<div class="col-sm-4 portfolio-item">
+                <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -164,7 +164,7 @@
                         <img src="img/portfolio/fooscover.png" class="img-responsive" alt="">
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                <!--<div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -529,8 +529,95 @@
                         <div class="modal-body">
                             <h2>Foosbot</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/foos.png" class="img-responsive img-centered" alt="">
-                            <p>Foosbot is a chat bot on the Kik Messenger Platform built to allow 2v2 ranked matches between players. Players can queue up using an emoji chat interface. Once players are matched, the bot will determine the optimal match up based on their TrueSkill rankings. The more games players play, the more confident the bot is in your TrueSkill. Currently only a global version is available, so four players need to be in the same location. </p>
+                            <strong text-align="left">Skills:</strong><p> User Controls, Navigation</p>
+                            <b align="left">Tools:</b><p>Python, Kik Chat API, Heroku</p>
+                             
+                            <h3 align="left">Background</h3>
+                            <p align="left">Foosbot was a chatbot co-designed during my internship with Michael Shimokura (I miss you!) at Kik Messenger in the Fall of 2015.  </p>
+
+                            <h3 align="left">Problem</h3>
+                            <p align="left">At Kik, Foosball was one of the unifying games among interns and employees during work breaks. Sometimes, however, due to the varying working schedules of each individual, we found that we did not know who was free to play foosball without distracting other employees.   </p>
+
+                            <h3 align="left">An Experiment with Chatbots</h3>
+                            <p align="left">Chatbots are bots that you can chat with which will reply back with pre-determined responses based on your input, or if backed by an artificial intelligence engine, reply to contextually. As messaging is the main interface for communicating with employees in real time, it would make sense to reach out to the same people using the same medium. As a result Foosbot was born.   </p>
+
+                            <p align="left">You can chat with a bot using typed responses, but what’s really unique about Kik when we first released chatbots was the ability to have the user click on pre-determined responses that send immediately. As interns, we were lucky enough to be the first to play and research how users can interact with chat before the feature fully released to the public. </p>
+
+                            <h3 align="left">Hello Foosbot</h3>
+
+                            <p align="left">Foosbot was our prototype for enabling employees to find other people who also wanted to play foosball without distracting others.</p>
+
+                            <figure><img src="img/portfolio/foos1.png" class="img-responsive img-centered" alt=""><figcaption> Foosbot Kik Profile </figcaption>
+                            </figure>
+
+                            <p align="left">We thought about what was important for a Foosball chatbot and finding people. In our initial brainstorming, we thought 2v2 was the most fun match up type, so for the initial prototype we designed around getting 2v2 match up going. A queuing system needed to be built, along with a leaderboard to gamify our bot for the extra incentive to make players get better. </p>
+
+                            <h3 align="left">Emoji Interface</h3>
+
+                            <p align="left">We thought having words as pre determined buttons took too much space and was not a good interface for a queuing application. Instead, as young interns we thought using emojis conveying simple actions would be a much better and delightful idea. </p>
+
+
+                            <p align="left">A soccer ball or play button could indicate a start of the queue, or emoji happy faces could even represent a rating system on how well a user thought the game was going. </p>
+
+                            <p align="left">In the end we ended up with these emojis for our interface:</p>
+
+                            <figure><img src="img/portfolio/foos2.png" class="img-responsive img-centered" alt=""><figcaption> State 1 Interface </figcaption>
+                            </figure>
+
+                            <br/>
+                            <br/>
+
+                            <figure><img src="img/portfolio/foos3.png" class="img-responsive img-centered" alt=""><figcaption> State 2 Interface </figcaption>
+                            </figure>
+
+                            <br/>
+                            <br/>
+
+                            <p align="left">There are basically 3 different states a user can be in with respect to our emoji interface.</p>
+
+                            <p align="left"><b>State 1:</b> Queue or Check Leaderboard</p>
+
+
+                            <p align="left"><b>State 2:</b> Cancel Queue or Check Queue or Check Leaderboard </p>
+
+                            <p align="left"><b>State 3:</b> We Won or We Lost</p>
+
+                            <p align="left">A soccer ball allows you to enter the queue. Top allows a user to view the leaderboard. A question mark allows the user to determine who is in the queue. A cancel emoji indicates cancel. </p>
+
+                            <p align="left">Below is a sample of entering a queue and exiting the queue: </p>
+
+                            <figure><img src="img/portfolio/foos4.png" class="img-responsive img-centered" alt=""><figcaption> Queue Response Examples </figcaption>
+                            </figure>
+
+                            <br/>
+                            <br/>
+
+                            <p align="left">If the bot doesn’t recognize input, it responds with a confused emoji and gives the user pre determined emoji response in chat. </p>
+
+                            <figure><img src="img/portfolio/foos5.png" class="img-responsive img-centered" alt=""><figcaption> User Opting for Leaderboard </figcaption>
+                            </figure>
+
+                            <br/>
+                            <br/>
+
+
+                            <figure><img src="img/portfolio/foos6.png" class="img-responsive img-centered" alt=""><figcaption> Leaderboard </figcaption>
+                            </figure>
+
+                            <br/>
+                            <br/>
+
+                            <p align="left">Finally the leaderboard is displayed above. We added a TrueSkill rating to encourage people to play with compete playfully with each other in the office.  </p>
+
+
+                            <h3 align="left">Improvements and Closing Thoughts</h3>
+
+                            <p align="left">Having a legend of emoji to action can help the user navigate our interface without needing to click the responses and seeing how the bot reacts. With our sample size of around 25 users, none have reported issues navigating or queuing for foosball and have continued to compete to become the best Kik Foosball player. </p>
+
+
+
+
+
                             <ul class="list-inline item-details">
                                 <li>Date:
                                     <strong>December 2015
