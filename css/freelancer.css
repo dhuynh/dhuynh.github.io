@@ -18,8 +18,8 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #c28e04;
-  outline: #c28e04;
+  color: #FFD6A2;
+  outline: #FFD6A2;
 }
 h1,
 h2,
@@ -45,11 +45,11 @@ hr.star-light {
   border-color: white;
 }
 hr.star-light:after {
-  background-color: #c28e04;
+  background-color: #46628C;
   color: white;
 }
 hr.star-primary {
-  border-color: #1077A2;
+  border-color: #46628C;
 }
 .img-centered {
   margin: 0 auto;
@@ -57,7 +57,7 @@ hr.star-primary {
 header {
   text-align: center;
   background: white;
-  color: #1077A2;
+  color: #46628C;
 }
 header .container {
   padding-top: 100px;
@@ -125,14 +125,14 @@ header .intro-text .skills {
   outline: none;
 }
 .navbar-default {
-  background-color: #1077A2;
+  background-color: #46628C;
 }
 .navbar-default a,
 .navbar-default a:hover,
 .navbar-default a:focus,
 .navbar-default a:active,
 .navbar-default a.active {
-  color: #c28e04;
+  color: #FFD6A2;
   outline: none;
 }
 .navbar-default,
@@ -147,7 +147,7 @@ section h2 {
   font-size: 3em;
 }
 section.success {
-  background: #1077A2;
+  background: #46628C;
   color: white;
 }
 section.success h2 {
@@ -161,7 +161,7 @@ section.success a:hover,
 section.success a:focus,
 section.success a:active,
 section.success a.active {
-  color: #c28e04;
+  color: #FFD6A2;
   outline: none;
 }
 @media (max-width: 767px) {
@@ -186,7 +186,7 @@ section.success a.active {
   margin: 0 auto;
 }
 #portfolio .portfolio-item .portfolio-link .caption {
-  background: rgba(194, 142, 4, 0.7);
+  background: rgba(255, 214, 162, 1);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -196,7 +196,8 @@ section.success a.active {
   -moz-transition: all ease 0.5s;
 }
 #portfolio .portfolio-item .portfolio-link .caption:hover {
-  opacity: 1;
+  opacity: 0.8;
+
 }
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
   position: absolute;
@@ -225,8 +226,8 @@ section.success a.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: #c28e04;
-  border-color: #c28e04;
+  background-color: #FFD6A2;
+  border-color: #FFD6A2;
 }
 .btn-outline {
   color: white;
@@ -288,7 +289,7 @@ section.success a.active {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #c28e04;
+  color: #FFD6A2;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
@@ -302,7 +303,7 @@ footer h3 {
 footer .footer-above {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #1077A2;
+  background-color: #46628C;
 }
 footer .footer-col {
   margin-bottom: 50px;
@@ -380,7 +381,7 @@ footer .footer-below {
   height: 75px;
   width: 1px;
   margin-left: 35px;
-  background-color: #c28e04;
+  background-color: #46628C;
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   /* IE 9 */
@@ -391,7 +392,7 @@ footer .footer-below {
 .portfolio-modal .close-modal .lr .rl {
   height: 75px;
   width: 1px;
-  background-color: #c28e04;
+  background-color: #46628C;
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   /* IE 9 */
