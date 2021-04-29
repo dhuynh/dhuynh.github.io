@@ -1,8 +1,16 @@
 [
+
  {
   "url_title": "SteamHubs",
   "title": "SteamHubs",
-  "sub_title": "How to design UI/UX for Mobile",
+  "sub_title": "How to design UI/UX for Mobile Apps",
+  "top_image": "top_image.png",
+  "visible": true
+ },
+ {
+  "url_title": "Foosbot",
+  "title": "Foosbot  ",
+  "sub_title": "Designing Emoji Chatbot Interfaces ",
   "top_image": "top_image.png",
   "visible": true
  },

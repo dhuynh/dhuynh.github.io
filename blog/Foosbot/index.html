@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foosbot  </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../index.css"></head>
+  <body>
+    <div id="loading">
+      <div id="spinner"></div>
+    </div>
+    <a href="/" class="go_back"><i class="fas fa-arrow-left"></i></a>
+    <div id="background_overlay"></div>
+    <div id="background" style="background: url(top_image.png) center;"></div>
+    <table id="profile_blog">
+      <tbody>
+        <tr>
+          <td style="width:8vw;"><div id="profile_img_blog"></div></td>
+          <td style="width:52vw;">
+            <div id="username_blog"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="blog-display">
+      <h1 id="blog_title">Foosbot  </h1>
+      <h2 id="blog_sub_title">Designing Chatbot Interfaces </h2>
+      <div id="blog"><p id="para_0_original"><iframe src="https://marvelapp.com/2dfd771?emb=1" width="290" height="580" allowtransparency="true" frameborder="0"></iframe>
+
+</p><p>If you were unable to view the prototype above, you can find it also here:  </p>
+
+                            <p><a href="https://marvelapp.com/2dfd771" class="btn btn-default">Play with Prototype</a></p><p></p><p id="para_1_original"></p><h1 align="left">Background</h1>
+                            <p align="left">Foosbot was a chatbot co-designed during my work with Michael Shimokura at Kik Messenger in the Fall of 2015.  </p>
+
+                            
+
+
+                            <h1 align="left">Problem</h1>
+                            <p align="left">At Kik, Foosball was one of the unifying games among interns and employees during work breaks. Sometimes, however, due to the varying working schedules of each individual, we found that we did not know who was free to play foosball without distracting other employees.   </p>
+
+                            <h1 align="left">An Experiment with Chatbots</h1>
+                            <p align="left">Chatbots are bots that you can chat with which will reply back with pre-determined responses based on your input, or if backed by an artificial intelligence engine, reply to contextually. As messaging is the main interface for communicating with employees in real time, it would make sense to reach out to the same people using the same medium. As a result Foosbot was born.   </p>
+
+                            <p align="left">You can chat with a bot using typed responses, but what’s really unique about Kik when we first released chatbots was the ability to have the user click on pre-determined responses that send immediately. As interns, we were lucky enough to be the first to play with and research how users can interact with chat before the feature fully released to the public. </p>
+
+                            <h1 align="left">Hello Foosbot</h1>
+
+                            <p align="left">Foosbot was our prototype for enabling employees to find other people who also wanted to play foosball without distracting others.</p><p></p><img src="img_0.png" alt="blog image 0" id="img_0_original"><p id="para_3_original"> </p><p align="left">We thought about what was important for a Foosball chatbot and finding people. In our initial brainstorming, we thought 2v2 was the most fun match up type, so for the initial prototype we designed around getting 2v2 match up going. A queuing system needed to be built, along with a leaderboard to gamify our bot for the extra incentive to make players get better. </p>
+
+                            <h3 align="left">Emoji Interface</h3>
+
+                            <p align="left">We thought having words as pre-determined buttons took too much space and was not a good interface for a queuing application. Instead, as young interns we thought using emojis conveying simple actions would be a much better and useful idea. Emoji's are used at a much higher rate for teenagers than other older demographics. [1] </p>
+
+
+                            <p align="left">A soccer ball or play button could indicate a start of the queue, or emoji happy faces could even represent a rating system on how well a user thought the game was going. Lastly, because emoji's are a universal standard across different platforms, using their unicode once applies their design everywhere. There are slight differences in the visual design of emojis between iOS and Android. </p>
+
+                            <p align="left">In the end we ended up with these emojis for our interface:</p>
+
+<p align="left"><b>State 1:</b> Queue or Check Leaderboard</p>
+
+        <p align="left">A soccer ball allows you to enter the queue. Top allows a user to view the leaderboard. A question mark allows the user to determine who is in the queue. A cancel emoji indicates cancel. </p><p></p><img src="img_1.png" alt="blog image 1" id="img_1_original"><p id="para_4_original">          </p><p align="left"><b>State 2:</b> Cancel Queue or Check Queue or Check Leaderboard </p>
+ <p align="left">Once a user is in the queue, they can either leave or check the leaderboard for their own pleasure. It was decided only one action should bring the user back out of the state, and it will always bring them back to state 1. </p><p></p><img src="img_2.png" alt="blog image 2" id="img_2_original"><p id="para_5_original"></p><p align="left"><b>State 3:</b> We Won or We Lost or Cancel Game</p>
+
+                            <p align="left">Once four people are in the queue, the bot responds with draw probability based on the users' previous rank. If they are unranked, a default skill of 25 is used (Microsoft's TrueSkill Algorithm) for it's calculation.  </p><p></p><img src="img_3.png" alt="blog image 3" id="img_3_original"><p id="para_6_original">                            </p><p align="left">Below is a sample of entering a queue and exiting the queue: </p>
+<p></p><img src="img_4.png" alt="blog image 4" id="img_4_original"><p id="para_7_original"></p><p align="left">If the bot does not recognize input sent by the user, it responds with a confused emoji and gives the user pre determined emoji confused face in chat. This message should be changed to be text based because it was  a confusing error message to our initial users. </p>
+<p></p><img src="img_5.png" alt="blog image 5" id="img_5_original"><img src="img_6.png" alt="blog image 6" id="img_6_original"><p id="para_8_original"></p><p align="left">Finally the leaderboard is displayed above. The TrueSkill rating is there to encourage people to play and compete playfully with each other in the office.  </p>
+
+
+                            <h1 align="left">Improvements and Closing Thoughts</h1>
+
+                            <p align="left">Having a legend of emoji to action can help the user navigate our interface without needing to click the responses and seeing how the bot reacts. With our sample size of around 25 users, none have reported issues navigating or queuing for foosball and have continued to compete to become the best Kik Foosball player. </p>
+
+                            <p align="left">By doing formal user testing such as an SUS survey given at the end, or doing user interviews, more issues relating to navigation can rise up to the top. Considering the simplicity of the interface and development time, it was determined that this would be the next step to bring the chatbot to the masses.  </p>
+
+                            <h1 align="left">References</h1>
+
+                            <p align="left">[1] <a href="http://www.businessinsider.com/how-teens-use-emojis-to-talk-2013-10">http://www.businessinsider.com/how-teens-use-emojis-to-talk-2013-10</a></p><p></p></div>
+    </div>
+    <div id="footer_blog">
+      <a href="https://github.com/imfunniee" target="_blank">made on earth by a human</a>
+    </div>
+    <script type="text/javascript">
+      setTimeout(function() {
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(function() {
+          document.getElementById("loading").classList.remove("animated");
+          document.getElementById("loading").classList.remove("fadeOut");
+          document.getElementById("loading").style.display = "none";
+        }, 800);
+      }, 1500);
+      $.getJSON("../../config.json", function(user) {
+        var icon = document.createElement("link");
+        icon.setAttribute("rel", "icon");
+        icon.setAttribute("href", user[0].userimg);
+        icon.setAttribute("type", "image/png");
+        document.getElementsByTagName("head")[0].appendChild(icon);
+        document.getElementById(
+          "profile_img_blog"
+        ).style.background = `url('${user[0].userimg}') center center`;
+        document.getElementById(
+          "username_blog"
+        ).innerHTML = `<span style="display:${
+          user[0].name == null || !user[0].name ? "none" : "block"
+        };">${user[0].name}</span>@${user[0].username}<b id="blog_time"></b>`;
+
+        if ((user[0].theme = "dark.css")) {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))";
+        } else {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1))";
+        }
+      });
+    </script>
+  
+
+</body></html>
